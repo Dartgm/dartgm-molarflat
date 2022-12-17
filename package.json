@@ -1,0 +1,16 @@
+{
+  "name": "molar-fileflat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "molarflat": "src/bin/flat"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "inquirer": "^7.3.3",
+    "commander": "^9.3.0"
+  },
+  "author": "",
+  "license": "ISC"
+}

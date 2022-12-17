@@ -1,0 +1,24 @@
+#! /usr/bin/env node
+
+const program=require('commander')
+
+const exec = require('child_process').execSync
+
+program.command('export <dir-name>')
+    .description('该命令将文件平面导出到特定文件夹')
+    .option('-f,--force','强制将文件导入该目录')
+    .action((name,cmd)=>{
+        require('../lib/creator')(name,cmd)
+    })
+
+program
+    .on('--help',function(){
+        console.log()
+        console.log(`正在运行 <command> --help，查看帮助命令`)
+        console.log()
+    })
+
+program
+    .version(`molarflat@${require('../../package.json').version}`)
+    .usage(`<command> [options]`)
+program.parse(process.argv)
